@@ -1,6 +1,6 @@
-# Tokenbound Documentation
+# OnchainMagic Documentation
 
-See [docs.tokenbound.org](https://docs.tokenbound.org)
+See [docs.onchainmagic.xyz](https://docs.onchainmagic.xyz)
 
 ## Getting Started
 
