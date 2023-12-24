@@ -4,34 +4,6 @@
     "title": "👋 Welcome"
   },
   "index": "Introduction",
-  "glossary": "Glossary",
-  "faq": "FAQs",
-  "--- Getting Started": {
-    "type": "separator",
-    "title": "🚀 Getting Started"
-  },
-  "guides": "Guides",
-  "--- Resources": {
-    "type": "separator",
-    "title": "📝 Resources"
-  },
-  "iframe": "NFT iframe",
-  "sdk": "SDK",
-  "contracts": "Contracts",
-  "eip": {
-    "title": "EIP-6551 ↗️",
-    "type": "page",
-    "href": "https://eips.ethereum.org/EIPS/eip-6551",
-    "newWindow": true
-  },
-  "awesome-tokenbound": {
-    "title": "Awesome Tokenbound ↗️",
-    "type": "page",
-    "href": "https://github.com/anggxyz/awesome-tokenbound",
-    "newWindow": true
-  },
-  "showcase": {
-    "title": "Showcase",
-    "type": "page"
-  }
+  "feed": "Feed",
+  "leaderboard": "Leaderboard"
 }

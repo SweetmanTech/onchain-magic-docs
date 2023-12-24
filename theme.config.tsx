@@ -4,7 +4,7 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 const config: DocsThemeConfig = {
   useNextSeoProps() {
     return {
-      titleTemplate: "%s - Tokenbound Documentation",
+      titleTemplate: "%s - OnchainMagic Documentation",
     };
   },
   head: (
@@ -13,39 +13,42 @@ const config: DocsThemeConfig = {
       <meta property="og:title" content="Token Bound" />
       <meta
         property="og:description"
-        content="Open-source tooling for ERC-6551 Token Bound Accounts"
+        content="Open-source tooling for uploading imagination"
       />
     </>
   ),
-  // eslint-disable-next-line @next/next/no-img-element
-  logo: <img src="/tokenbound-logo.svg" alt="tokenbound logo" />,
+  logo: (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/onchainmagiclogo.jpeg"
+      alt="onchainmagic logo"
+      height={50}
+      width={50}
+    />
+  ),
   sidebar: {
     titleComponent({ title, type }) {
-      if (type === 'separator') {
-        return <span className="cursor-default">{title}</span>
+      if (type === "separator") {
+        return <span className="cursor-default">{title}</span>;
       }
-      return <>{title}</>
+      return <>{title}</>;
     },
     defaultMenuCollapseLevel: 0,
-    toggleButton: true
+    toggleButton: true,
   },
   project: {
-    link: "https://github.com/tokenbound",
+    link: "https://github.com/SweetmanTech/onchain-magic-docs",
   },
-  docsRepositoryBase: "https://github.com/tokenbound/docs/blob/main",
+  docsRepositoryBase: "https://github.com/SweetmanTech/onchain-magic-docs",
   footer: {
-    text: `Tokenbound ${new Date().getFullYear()}`,
+    text: `OnchainMagic ${new Date().getFullYear()}`,
   },
   primaryHue: 199,
   banner: {
-    key: "ERC-6551",
+    key: "Download",
     text: (
-      <a
-        href="https://eips.ethereum.org/EIPS/eip-6551"
-        target="_blank"
-        rel="noreferrer"
-      >
-        🎉 ERC-6551 is live! We need your support and feedback. Read more →
+      <a href="https://onchainmagic.xyz" target="_blank" rel="noreferrer">
+        🎉 OnchainMagic is available in early beta! Download the app →
       </a>
     ),
   },

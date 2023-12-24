@@ -1,0 +1,48 @@
+import { Callout } from "nextra-theme-docs";
+
+# useFeed
+
+The useFeed hook provides functions for using a zora feed.
+
+### useFeed
+
+once you've installed `onchain-magic` you can use the `useFeed` hook in your app
+
+```
+import { useFeed } from 'onchain-magic';
+const MyFeed = () => {
+    const { feed, setActiveDrop, } = useFeed()
+
+    return(
+        <div>
+            {feed.map((drop, i) => (
+                <div>
+                    <p>{drop.contractAddress}</p>
+                    <p>{drop.chainId}</p>
+                    <p>{drop.uri}</p>
+                    <p>{drop.blockNumber}</p>
+                    <p>{drop.type}</p>
+                    <p>{drop?.tokenId}</p>
+                </div>
+            ))}
+        </div>
+    )
+}
+
+export default MyFeed
+```
+
+### Drop
+
+the feed is an array of `drops`.
+
+Each Drop contains the following attributes:
+
+| Parameter           | Description                                          | Type        |
+| ------------------- | ---------------------------------------------------- | ----------- |
+| **contractAddress** | The address of the token contract.                   | string      |
+| **chainId**         | The id of the chain on which the media exists        | string      |
+| **uri**             | The content uri of the media                         | string      |
+| **blockNumber**     | The blocknumber when the media was published onchain | string      |
+| **type**            | Contract Type                                        | 1155 or 721 |
+| **tokenId**         | The token ID.                                        | string      |
