@@ -1,27 +1,28 @@
 import { Callout } from "nextra-theme-docs";
 
-# use1155Drop
+# useCollection
 
-The useFeed hook provides functions for using a zora feed.
+The `useCollection` hook provides functions for using accessing a collection of media on zora.
 
-once you've installed `onchain-magic` you can use the `use1155Drop` hook in your app
+once you've installed `onchain-magic` you can use the `useCollection` hook in your app
 
 ### Usage
 
 ```
-import { use1155Drop } from 'onchain-magic';
+import { useCollection } from 'onchain-magic';
+
 const ZoraDrop = () => {
-    const { tokens, mintAll, mintWithRewards } = use1155Drop()
+    const { data: tokens, collectAll, collectWithRewards } = useCollection()
 
     return(
         <div>
             {tokens.map((token) => (
                 <div>
                     <p>Metadata: {token.uri}</p>
-                    <button type="button" onClick={mintWithRewards(token.tokenId)}>Collect</button>
+                    <button type="button" onClick={buyWithRewards(token.tokenId)}>Collect</button>
                 </div>
             ))}
-            <button type="button" onClick={mintAll}>Collect All</button>
+            <button type="button" onClick={buyAll}>Collect All</button>
         </div>
     )
 }
