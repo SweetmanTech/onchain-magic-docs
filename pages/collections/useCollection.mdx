@@ -1,0 +1,46 @@
+import { Callout } from "nextra-theme-docs";
+
+# useCollection
+
+The `useCollection` hook provides functions for using accessing a collection of media on zora.
+
+once you've installed `onchain-magic` you can use the `useCollection` hook in your app
+
+### Usage
+
+```
+import { useCollection } from 'onchain-magic';
+
+const ZoraDrop = () => {
+    const { data: tokens, collectAll, collectWithRewards } = useCollection()
+
+    return(
+        <div>
+            {tokens.map((token) => (
+                <div>
+                    <p>Metadata: {token.uri}</p>
+                    <button type="button" onClick={buyWithRewards(token.tokenId)}>Collect</button>
+                </div>
+            ))}
+            <button type="button" onClick={buyAll}>Collect All</button>
+        </div>
+    )
+}
+
+export default ZoraDrop
+```
+
+### Drop
+
+the tokens are an array of `drops`.
+
+Each Drop contains the following attributes:
+
+| Parameter           | Description                                          | Type        |
+| ------------------- | ---------------------------------------------------- | ----------- |
+| **contractAddress** | The address of the token contract.                   | string      |
+| **chainId**         | The id of the chain on which the media exists        | string      |
+| **uri**             | The content uri of the media                         | string      |
+| **blockNumber**     | The blocknumber when the media was published onchain | string      |
+| **type**            | Contract Type                                        | 1155 or 721 |
+| **tokenId**         | The token ID.                                        | string      |
